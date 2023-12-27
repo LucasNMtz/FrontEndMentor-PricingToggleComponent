@@ -1,0 +1,215 @@
+:root{
+    /* ## Colors
+    ### Primary */
+    --Light-Blue: hsl(236, 72%, 79%);
+    --Blue: hsl(237, 63%, 64%);
+    /* ### Neutral */
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Very-Light-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 365px;
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3rem 0;
+}
+
+h1{
+    color: var(--Grayish-Blue);
+    font-size: 2.3em;
+}
+
+.toggle-button-container{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.toggle-button-container span{
+    color: var(--Light-Grayish-Blue);
+    font-size: 1.1em;
+}
+
+#toggle-button{
+    background: linear-gradient(to bottom, var(--Light-Blue), var(--Blue));
+    width: 70px;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#toggle-button:hover{
+    filter: brightness(1.2);
+}
+
+.toggle-button-disc{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    left: 0;
+    transition: all 1s;
+}
+
+main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    transition: all 1s;
+}
+
+main section, main section button{
+    border-radius: 10px;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 440px;
+}
+
+.characteristics-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.characteristics-container span{
+    padding: 1.2rem;
+    border: 1px solid var(--Light-Grayish-Blue);
+    border-left: none;
+    border-right: none;
+    font-size: 1em;
+}
+
+.characteristics-container span:nth-child(2){
+    border: none;
+}
+
+h2, main section span{
+    color: var(--Grayish-Blue);
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+main section button{
+    color: #fff;
+    background: linear-gradient(to right, var(--Light-Blue), var(--Blue));
+    border: 1px solid #fff;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s;
+}
+
+main section span, main section button{
+    width: 100%;
+}
+
+.price-span{
+    color: var(--Dark-Grayish-Blue);
+    font-size: 4.5em;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.side-section button:hover{
+    border: 1px solid var(--Light-Grayish-Blue);
+    color: var(--Blue);
+    background: none;
+}
+
+.professional-section{
+    background: linear-gradient(to bottom, var(--Light-Blue), var(--Blue));
+}
+
+.professional-section span, .professional-section h2{
+    color: #fff;
+}
+
+.professional-section button{
+    border-color: var(--Blue);
+    background: none;
+    background-color: #fff;
+    color: var(--Blue);
+}
+
+.professional-section button:hover{
+    border-color: #fff;
+    background: linear-gradient(to bottom, var(--Light-Blue), var(--Blue));
+    color: #fff;
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--Dark-Grayish-Blue);}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; font-size: 14px;}
+.attribution a:hover { text-decoration: underline; }
+
+.toggle-button-disc-monthly{
+    left: 37px;
+}
+
+.price-span-toggle{
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        top: -20px;
+    }
+    50%{
+        opacity: 0.5;
+        top: -10px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    main{
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .professional-section{
+        justify-content: center;
+        height: 560px;
+    }
+}
